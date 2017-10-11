@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import Layout from '../constants/Layout';
 import { WebBrowser } from 'expo';
-import key from '../newsApi';
 
 export default class Card extends Component {
 	formatDate (date = '') {
@@ -17,7 +16,6 @@ export default class Card extends Component {
 	render() {
 		const { imageUri, author, date, title, description } = this.props.item;
 		const dateTime = this.formatDate(date);
-		console.warn('key ', key);
 		return (
 			<TouchableOpacity onPress={this.handlePress}>
 				<View style={styles.cardContainer}>
