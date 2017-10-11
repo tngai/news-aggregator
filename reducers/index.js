@@ -1,11 +1,16 @@
 import { combineReducers } from 'redux';
+import { GET_ARTICLES_SUCCESS } from '../actions/actionTypes';
 
-const sources = (state={}, action={}) => {
-	return {
-		test: 'test'
-	};
+const articles = (state=[], action={}) => {
+	switch (action.type) {
+		case GET_ARTICLES_SUCCESS:
+		console.warn('here', action.paylod);
+			return [...action.payload];
+		default:
+			return state;
+	}
 };
 
 export default combineReducers({
-	sources
+	articles
 });
