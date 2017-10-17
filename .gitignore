@@ -1,3 +1,5 @@
 node_modules/**/*
 .expo/**/*
 newsApi.js
+__tests__/__snapshots__/
+components/__tests__/__snapshots__/
