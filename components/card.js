@@ -38,7 +38,7 @@ export default class Card extends Component {
 const styles = StyleSheet.create({
 	cardContainer: {
 		height: 'auto',
-		paddingBottom: 10
+		paddingBottom: 10,
 	},
 	cardImage: {
 		flex: 1,
@@ -50,13 +50,16 @@ const styles = StyleSheet.create({
 	titleText: {
 		textAlign: 'justify',
 		marginTop: 10,
-    fontSize: 18,
-    color: '#0d0d0d',
-    marginLeft: 5
+	    fontSize: 18,
+	    color: '#0d0d0d',
+	    marginLeft: 5,
+	    padding: 10,
 	},
 	metaContainer: {
 		margin: 5,
 		flexDirection:'row',
+		paddingLeft: 10,
+		paddingRight: 10,
 	},
 	author: {
 		flex: 1,
@@ -70,6 +73,6 @@ const styles = StyleSheet.create({
 	},
 	description: {
 		padding: 10,
-		textAlign: 'justify'
-	}
+		textAlign: 'justify',
+	},
 });
