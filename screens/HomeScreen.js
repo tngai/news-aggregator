@@ -5,13 +5,12 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
 } from 'react-native';
-import { WebBrowser } from 'expo';
 import { connect } from 'react-redux';
 import { MonoText } from '../components/StyledText';
 import  { Tile } from 'react-native-elements';
+import Link from '../components/link';
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -31,6 +30,7 @@ class HomeScreen extends React.Component {
             />
           </View>
         </ScrollView>
+        <Link url="https://newsapi.org" />
       </View>
     );
   }
