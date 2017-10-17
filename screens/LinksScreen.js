@@ -7,14 +7,8 @@ import _ from 'underscore';
 
 class LinksScreen extends React.PureComponent {
   static navigationOptions = {
-    title: 'Links',
+    header: null
   };
-
-  _formatNewsResponse ({ payload }) {
-    const { articles } = payload;
-
-    console.warn('what was passed through ', articles);
-  }
 
   componentWillMount () {
     return _.isEmpty(this.props.articles) && this.props.getNewsArticles('techcrunch');
@@ -43,7 +37,6 @@ class LinksScreen extends React.PureComponent {
   }
 }
 const mapStateToProps = (state={}) => {
-  console.warn('prop state ', state);
   return {
     articles: state.articles
   };
@@ -55,8 +48,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff'
-  },
-  scrollList: {
-    height: 800
   }
 });
